@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #03AED2;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    height: 80%;
+    box-shadow: 20px 20px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.addTaskForm {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid #000;
+}
+
+.addTaskForm input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.addTaskForm input::placeholder {
+    color: #000;
+}
+
+#add-task-btn {
+    width: 30%;
+    background-color: #FDDE55;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.container .todoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todoList li {
+    position: relative;
+    list-style: none;
+    margin-bottom: 8px;
+    background: #f2f2f2;
+    border-radius: 3px;
+    padding: 10px 15px;
+    cursor: default;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.todoList li .icon {
+    position: absolute;
+    right: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e74c3c;
+    width: 45px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.todoList li:hover .icon {
+    right: 0px;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 80%;
+    }
+}
